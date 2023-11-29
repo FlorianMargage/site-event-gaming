@@ -1,7 +1,7 @@
-index:
-   path: /
-   controller: App\Controller\IndexController::index
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
 
-account:
-  path: /account
-  controller: App\Controller\AccountController::account
+index:
+  path: /home
+  controller: App\Controller\TournamentController::home
