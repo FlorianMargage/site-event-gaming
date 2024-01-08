@@ -18,5 +18,10 @@ class TournamentController extends AbstractController
         return $this->render('home.html.twig', []);
     }
 
+    public function account()
+    {
+        return $this->render('account.html.twig', []);
+    }
+
 }
 
