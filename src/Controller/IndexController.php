@@ -12,4 +12,11 @@ class IndexController extends AbstractController
     {
         return $this->render('index.html.twig', []);
     }
+
+    public function inscription(): Response
+    {
+        return $this->render('inscription.html.twig', []);
+    }
 }
+
+
