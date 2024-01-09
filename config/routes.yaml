@@ -17,3 +17,12 @@ index:
 inscription:
   path: /inscription
   controller: App\Controller\IndexController::inscription
+
+
+parametre:
+  path: /parametre
+  controller: App\Controller\IndexController::parametre
+
+connection:
+  path: /connection
+  controller: App\Controller\IndexController::connection

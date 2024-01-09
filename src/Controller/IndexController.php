@@ -17,6 +17,17 @@ class IndexController extends AbstractController
     {
         return $this->render('inscription.html.twig', []);
     }
+
+    public function parametre(): Response
+    {
+        return $this->render('parametre.html.twig', []);
+    }
+
+    public function connection(): Response
+    {
+        return $this->render('connection.html.twig', []);
+    }
+
 }
 
 

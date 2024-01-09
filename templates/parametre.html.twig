@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paramètre tournoi</title>
+</head>
+<body>
+
+    <h1>Paramètre tournoi</h1>
+
+    <form action="traitement_parametres.php" method="post">
+        <label for="nom">Nom:</label>
+        <input type="text" id="nom" name="nom" value="">
+
+        <br>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="4" cols="50"></textarea>
+
+        <br>
+
+        <label for="nbParticipants">Nombre de participants:</label>
+        <select id="nbParticipants" name="nbParticipants">
+            <?php
+            for ($i = 1; $i <= 10; $i++) {
+                echo "<option value='$i'>$i</option>";
+            }
+            ?>
+        </select>
+
+        <br>
+
+        <label for="localisation">Localisation:</label>
+        <input type="text" id="localisation" name="localisation" value="">
+
+        <br>
+
+        <label for="horaire">Horaire:</label>
+        <input type="datetime-local" id="horaire" name="horaire" value="">
+
+        <br>
+
+        <label for="jeux">Jeux:</label>
+        <select id="jeux" name="jeux">
+            <option value="League of Legends">League of Legends</option>
+            <option value="Valorant">Valorant</option>
+            <option value="Overwatch">Overwatch</option>
+            <option value="Counter-Strike">Counter-Strike</option>
+        </select>
+
+        <br>
+
+        <label for="formatTournoi">Format de tournoi:</label>
+        <input type="text" id="formatTournoi" name="formatTournoi" value="">
+
+        <br>
+
+        <input type="submit" value="Enregistrer">
+    </form>
+
+</body>
+</html>
