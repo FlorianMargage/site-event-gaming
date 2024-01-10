@@ -2,18 +2,29 @@
 #    path: /
 #    controller: App\Controller\DefaultController::index
 
+
+
 home:
   path: /
-  controller: App\Controller\TournamentController::home
+  controller: App\Controller\IndexController::home
+
+connection:
+  path: /connection
+  controller: App\Controller\IndexController::connection
+
+inscription:
+  path: /inscription
+  controller: App\Controller\IndexController::inscription
 
 account:
   path: /account
   controller: App\Controller\TournamentController::account
 
+test:
+  path: /test
+  controller: App\Controller\TestController::test
+
+
 index:
   path: /index
   controller: App\Controller\IndexController::index
-
-inscription:
-  path: /inscription
-  controller: App\Controller\IndexController::inscription

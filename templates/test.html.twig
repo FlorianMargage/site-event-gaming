@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {# Exemple dans list.html.twig #}
+
+    {# Parcours de la liste des utilisateurs pour les afficher #}
+    {% for user in utilisateurs %}
+    <p>{{ user.nom }} - {{ user.email }}</p>
+    {# Affiche les détails de chaque utilisateur, adaptez selon votre modèle de données #}
+    {% endfor %}
+</body>
+
+</html>

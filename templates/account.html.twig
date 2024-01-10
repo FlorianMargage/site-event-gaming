@@ -8,7 +8,18 @@
 </head>
 
 <body>
-    <h1>Mon Compte</h1>
+    <div>
+        <div>Image</div>
+        <div>Nom : {{user.getNom()}}</div>
+        <div>Pseudo : {{user.getPseudo()}}</div>
+        <div>Date de naissance : {{user.getDateNaissance()}}</div>
+        <div>email : {{user.getEmail()}}</div>
+        <div>Mdp : {{user.getMdp()}}</div>
+        <div>Historique des tournois : </div>
+        <a href="{{path('connection')}}">Déconnexion</a>
+        <a>Modifier</a>
+        <a>Validation</a>
+    </div>
 </body>
 
 </html>
