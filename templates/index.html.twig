@@ -69,6 +69,13 @@
         </div>
 
     </form>
+    <form action="{{ path('connection') }}" method="post">
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <button type="submit">Valider</button>
+        {{ form_end(form) }}
+    </form>
+
 
 </body>
 

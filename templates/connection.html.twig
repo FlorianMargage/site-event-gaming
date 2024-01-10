@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+</head>
+
+<body>
+    <div>
+        <div>Image</div>
+        <div>
+            <p>Connection</p>
+            <form action="{{ path('account') }}" method="post">
+                <input type="text" name="pseudo" placeholder="Pseudo">
+                <input type="password" name="mot_de_passe" placeholder="Mot de passe">
+                <button type="submit">Connexion</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
