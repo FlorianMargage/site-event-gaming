@@ -4,81 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
     <link rel="stylesheet" href="{{ asset('css/inscription.css') }}">
 
-    <title>Inscription</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            margin: 0;
+            background-color: #B685F4;
+        }
+
+        .formulaire {
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            padding: 20px;
+            width: 300px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            line-height: 30px;
+        }
+
+        .button{
+            margin-left: 100px;
+        }
+
+    </style>
 </head>
 
 <body>
-
-    <h1>Inscription</h1>
-
-    <!-- Rubrique pour la photo de profil -->
-    <div>
-        <label for="photo">Photo de profil :</label>
-        <input type="file" id="photo" name="photo">
-        <!-- Vous pouvez ajouter ici un aperçu de la photo si nécessaire -->
+    <div class="formulaire">
+        <h1>Inscription</h1>
+        <form action="{{ path('connection') }}" method="post">
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            <button type="submit" class="button">Valider</button>
+            {{ form_end(form) }}
+        </form>
     </div>
-
-    <!-- Formulaire d'inscription -->
-    <form action="{{ path('inscription') }}" method="post">
-
-        <!-- Champ Nom -->
-        <div>
-            <label for="nom">Nom :</label>
-            <input type="text" id="nom" name="nom" required>
-        </div>
-
-        <!-- Champ Pseudo -->
-        <div>
-            <label for="pseudo">Pseudo :</label>
-            <input type="text" id="pseudo" name="pseudo" required>
-        </div>
-
-        <!-- Champ Date de Naissance -->
-        <div>
-            <label for="date_naissance">Date de Naissance :</label>
-            <input type="date" id="date_naissance" name="date_naissance" required>
-        </div>
-
-        <!-- Champ Email -->
-        <div>
-            <label for="email">Email :</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-
-        <!-- Confirmation Email -->
-        <div>
-            <label for="confirm_email">Confirmer Email :</label>
-            <input type="email" id="confirm_email" name="confirm_email" required>
-        </div>
-
-        <!-- Champ Mot de Passe -->
-        <div>
-            <label for="mot_de_passe">Mot de Passe :</label>
-            <input type="password" id="mot_de_passe" name="mot_de_passe" required>
-        </div>
-
-        <!-- Confirmation Mot de Passe -->
-        <div>
-            <label for="confirm_mot_de_passe">Confirmer Mot de Passe :</label>
-            <input type="password" id="confirm_mot_de_passe" name="confirm_mot_de_passe" required>
-        </div>
-
-        <!-- Bouton de soumission du formulaire -->
-        <div>
-            <button type="submit">Validation</button>
-        </div>
-
-    </form>
-    <form action="{{ path('connection') }}" method="post">
-        {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <button type="submit">Valider</button>
-        {{ form_end(form) }}
-    </form>
-
-
 </body>
 
 </html>
