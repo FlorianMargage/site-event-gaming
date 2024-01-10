@@ -36,7 +36,7 @@ class IndexController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($utilisateur);
             $entityManager->flush();
-
+            return $this->redirectToRoute('connection');
             // Redirection ou autre traitement après enregistrement réussi
         }
 

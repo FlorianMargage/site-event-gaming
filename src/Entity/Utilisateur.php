@@ -13,19 +13,19 @@ class Utilisateur
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
+    #[ORM\Column(length: 255)]
     private ?string $Nom = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
+    #[ORM\Column(length: 255)]
     private ?string $Pseudo = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $Email = null;
-
-    #[ORM\Column(length: 255, nullable: true)]
+    #[ORM\Column(length: 255)]
     private ?string $DateNaissance = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
+    #[ORM\Column(length: 255)]
+    private ?string $Email = null;
+
+    #[ORM\Column(length: 255)]
     private ?string $Mdp = null;
 
     public function getId(): ?int
@@ -38,7 +38,7 @@ class Utilisateur
         return $this->Nom;
     }
 
-    public function setNom(?string $Nom): static
+    public function setNom(string $Nom): static
     {
         $this->Nom = $Nom;
 
@@ -50,21 +50,9 @@ class Utilisateur
         return $this->Pseudo;
     }
 
-    public function setPseudo(?string $Pseudo): static
+    public function setPseudo(string $Pseudo): static
     {
         $this->Pseudo = $Pseudo;
-
-        return $this;
-    }
-
-    public function getEmail(): ?string
-    {
-        return $this->Email;
-    }
-
-    public function setEmail(?string $Email): static
-    {
-        $this->Email = $Email;
 
         return $this;
     }
@@ -74,9 +62,21 @@ class Utilisateur
         return $this->DateNaissance;
     }
 
-    public function setDateNaissance(?string $DateNaissance): static
+    public function setDateNaissance(string $DateNaissance): static
     {
         $this->DateNaissance = $DateNaissance;
+
+        return $this;
+    }
+
+    public function getEmail(): ?string
+    {
+        return $this->Email;
+    }
+
+    public function setEmail(string $Email): static
+    {
+        $this->Email = $Email;
 
         return $this;
     }
@@ -86,7 +86,7 @@ class Utilisateur
         return $this->Mdp;
     }
 
-    public function setMdp(?string $Mdp): static
+    public function setMdp(string $Mdp): static
     {
         $this->Mdp = $Mdp;
 

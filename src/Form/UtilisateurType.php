@@ -14,8 +14,8 @@ class UtilisateurType extends AbstractType
         $builder
             ->add('Nom')
             ->add('Pseudo')
-            ->add('Email')
             ->add('DateNaissance')
+            ->add('Email')
             ->add('Mdp')
         ;
     }

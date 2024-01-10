@@ -29,17 +29,16 @@
             line-height: 30px;
         }
 
-        .button{
+        .button {
             margin-left: 100px;
         }
-
     </style>
 </head>
 
 <body>
     <div class="formulaire">
         <h1>Inscription</h1>
-        <form action="{{ path('connection') }}" method="post">
+        <form method="post">
             {{ form_start(form) }}
             {{ form_widget(form) }}
             <button type="submit" class="button">Valider</button>
