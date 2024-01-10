@@ -5,19 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            margin: 0;
+            background-color: #B685F4;
+        }
+
+        .formulaire {
+            background-color: #f4f4f4; /* Couleur d'arrière-plan de votre choix */
+            padding: 20px; /* Ajoutez de la marge intérieure pour plus d'espace */
+            width: 300px; /* Largeur de votre formulaire */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        .form{
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+
+    </style>
 </head>
 
 <body>
-    <div>
+    <div class="formulaire">
+        <h1>Connection</h1> 
         <div>Image</div>
-        <div>
-            <p>Connection</p>
-            <form action="{{ path('account') }}" method="post">
-                <input type="text" name="pseudo" placeholder="Pseudo">
-                <input type="password" name="mot_de_passe" placeholder="Mot de passe">
-                <button type="submit">Connexion</button>
-            </form>
-        </div>
+        <form action="{{ path('account') }}" method="post" class="form">
+            <input type="text" name="pseudo" placeholder="Pseudo" style="margin-bottom: 15px">
+            <input type="password" name="mot_de_passe" placeholder="Mot de passe" style="margin-bottom: 15px">
+            <button type="submit" style="margin-bottom: 30px">Connexion</button>
+        </form>
     </div>
 </body>
 
