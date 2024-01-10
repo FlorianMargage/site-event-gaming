@@ -6,58 +6,64 @@
     <title>Paramètre tournoi</title>
 </head>
 <body>
+    <div class="formulaire">
+        <h1>Paramètre tournoi</h1>
 
-    <h1>Paramètre tournoi</h1>
+        <form action="traitement_parametres.php" method="post">
+            <label for="nom">Nom:</label>
+            <input type="text" id="nom" name="nom" value="">
 
-    <form action="traitement_parametres.php" method="post">
-        <label for="nom">Nom:</label>
-        <input type="text" id="nom" name="nom" value="">
+            <br>
 
-        <br>
+            <label for="Description">Description:</label>
+            <input type="text" id="nom" name="nom" value="">
 
-        <label for="description">Description:</label>
-        <textarea id="description" name="description" rows="4" cols="50"></textarea>
+            <br>
 
-        <br>
+            <label for="nbParticipants">Nombre de participants:</label>
+            <select id="nbParticipants" name="nbParticipants">
+                <option value="League of Legends">1</option>
+                <option value="League of Legends">2</option>
+                <option value="League of Legends">3</option>
+                <option value="League of Legends">4</option>
+                <option value="League of Legends">5</option>
+                <option value="League of Legends">6</option>
+                <option value="League of Legends">7</option>
+                <option value="League of Legends">8</option>
+                <option value="League of Legends">9</option>
+                <option value="League of Legends">10</option>
+            </select>
 
-        <label for="nbParticipants">Nombre de participants:</label>
-        <select id="nbParticipants" name="nbParticipants">
-            <?php
-            for ($i = 1; $i <= 10; $i++) {
-                echo "<option value='$i'>$i</option>";
-            }
-            ?>
-        </select>
+            <br>
 
-        <br>
+            <label for="localisation">Localisation:</label>
+            <input type="text" id="localisation" name="localisation" value="">
 
-        <label for="localisation">Localisation:</label>
-        <input type="text" id="localisation" name="localisation" value="">
+            <br>
 
-        <br>
+            <label for="horaire">Horaire:</label>
+            <input type="datetime-local" id="horaire" name="horaire" value="">
 
-        <label for="horaire">Horaire:</label>
-        <input type="datetime-local" id="horaire" name="horaire" value="">
+            <br>
 
-        <br>
+            <label for="jeux">Jeux:</label>
+            <select id="jeux" name="jeux">
+                <option value="League of Legends">League of Legends</option>
+                <option value="Valorant">Valorant</option>
+                <option value="Overwatch">Overwatch</option>
+                <option value="Counter-Strike">Counter-Strike</option>
+            </select>
 
-        <label for="jeux">Jeux:</label>
-        <select id="jeux" name="jeux">
-            <option value="League of Legends">League of Legends</option>
-            <option value="Valorant">Valorant</option>
-            <option value="Overwatch">Overwatch</option>
-            <option value="Counter-Strike">Counter-Strike</option>
-        </select>
+            <br>
 
-        <br>
+            <label for="formatTournoi">Format de tournoi:</label>
+            <input type="text" id="formatTournoi" name="formatTournoi" value="">
 
-        <label for="formatTournoi">Format de tournoi:</label>
-        <input type="text" id="formatTournoi" name="formatTournoi" value="">
+            <br>
 
-        <br>
-
-        <input type="submit" value="Enregistrer">
-    </form>
+            <input type="submit" value="Enregistrer">
+        </form>
+    </div>
 
 </body>
 </html>
